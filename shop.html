@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | TMart</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <div class="toast-root" id="toastRoot"></div>
+    <button class="scroll-top" id="scrollTopBtn">↑</button>
+    <header class="topbar">
+      <nav class="navbar container">
+        <a class="brand" href="index.html"><span class="brand-mark">T</span><span>TMart</span></a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html" class="active">Shop</a>
+          <a href="wishlist.html">Wishlist</a>
+          <a href="profile.html">Profile</a>
+        </div>
+        <div class="nav-actions">
+          <label class="search-shell" for="globalSearch">
+            <input type="text" id="globalSearch" placeholder="Search products" />
+            <div class="search-suggestions" id="searchSuggestions"></div>
+          </label>
+          <a class="icon-link" href="wishlist.html">♡<b id="wishlistCount">0</b></a>
+          <a class="icon-link" href="cart.html">🛒<b id="cartCount">0</b></a>
+          <a class="icon-link" href="signin.html">👤</a>
+          <button class="theme-toggle" id="themeToggle">☀️</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container page-section">
+      <section class="page-head reveal">
+        <div>
+          <p class="eyebrow">Discover</p>
+          <h1>Shop premium essentials</h1>
+        </div>
+      </section>
+
+      <section class="shop-layout reveal">
+        <aside class="filters-card">
+          <h3>Filters</h3>
+          <label>
+            Category
+            <select id="categoryFilter"><option value="all">All</option></select>
+          </label>
+          <label>
+            Brand
+            <select id="brandFilter"><option value="all">All</option></select>
+          </label>
+          <label>
+            Price
+            <input type="range" id="priceFilter" min="0" max="500" value="500" />
+            <span id="priceValue">Up to $500</span>
+          </label>
+          <label>
+            Minimum Rating
+            <select id="ratingFilter"><option value="0">Any</option><option value="4">4★+</option><option value="4.5">4.5★+</option></select>
+          </label>
+          <label>
+            Discount
+            <select id="discountFilter"><option value="0">Any</option><option value="10">10%+</option><option value="20">20%+</option></select>
+          </label>
+          <label>
+            Availability
+            <select id="availabilityFilter"><option value="all">All</option><option value="in-stock">In Stock</option><option value="low-stock">Low Stock</option></select>
+          </label>
+        </aside>
+        <div class="shop-content">
+          <div class="toolbar">
+            <div class="results-info" id="resultsInfo">Loading products...</div>
+            <select id="sortFilter">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price Low to High</option>
+              <option value="price-desc">Price High to Low</option>
+              <option value="rating">Highest Rated</option>
+              <option value="newest">Newest</option>
+              <option value="best-selling">Best Selling</option>
+            </select>
+          </div>
+          <div class="product-grid" id="shopProducts"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-bottom">© 2026 TMart. Crafted with elegance.</div>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

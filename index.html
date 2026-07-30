@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMart | Premium E-Commerce</title>
+    <meta name="description" content="Premium e-commerce experience with modern products, fast checkout, and elegant UX." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loader-ring"></div>
+    </div>
+    <div class="toast-root" id="toastRoot" aria-live="polite"></div>
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+    <button class="fab" id="fabBtn" aria-label="Quick actions">⚡</button>
+
+    <header class="topbar">
+      <div class="offer-banner">
+        <span>Limited time: Save 20% on premium tech gadgets.</span>
+        <a href="shop.html">Shop now</a>
+      </div>
+      <nav class="navbar container">
+        <a class="brand" href="index.html" aria-label="TMart home">
+          <span class="brand-mark">T</span>
+          <span>TMart</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="active">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="wishlist.html">Wishlist</a>
+          <a href="profile.html">Profile</a>
+        </div>
+        <div class="nav-actions">
+          <label class="search-shell" for="globalSearch">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12Zm0 0 8 8"/></svg>
+            <input type="text" id="globalSearch" placeholder="Search products" />
+            <div class="search-suggestions" id="searchSuggestions"></div>
+          </label>
+          <a class="icon-link" href="wishlist.html" aria-label="Wishlist"><span>♡</span><b id="wishlistCount">0</b></a>
+          <a class="icon-link" href="cart.html" aria-label="Cart"><span>🛒</span><b id="cartCount">0</b></a>
+          <a class="icon-link" href="signin.html" id="authLink" aria-label="Account">👤</a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">Curated for modern living</p>
+          <h1>Elevate every day with premium essentials.</h1>
+          <p>Discover fashion, tech, home, accessories, and wellness products crafted for the contemporary lifestyle.</p>
+          <div class="hero-actions">
+            <a href="shop.html" class="btn btn-primary">Explore Collection</a>
+            <a href="product.html?id=1" class="btn btn-secondary">View Featured</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>50k+</strong><span>Happy buyers</span></div>
+            <div><strong>4.9★</strong><span>Average rating</span></div>
+            <div><strong>24/7</strong><span>Support</span></div>
+          </div>
+        </div>
+        <div class="hero-slider" id="heroSlider">
+          <div class="slide active" data-bg="linear-gradient(135deg, #7c4dff, #2ed6ff)">
+            <h3>Launch Edition</h3>
+            <p>Elegant gadgets with minimalist design.</p>
+          </div>
+          <div class="slide" data-bg="linear-gradient(135deg, #ff6b6b, #ffd166)">
+            <h3>Summer Glow</h3>
+            <p>Fresh fashion and wellness essentials.</p>
+          </div>
+          <div class="slide" data-bg="linear-gradient(135deg, #1dd1a1, #10ac84)">
+            <h3>Studio Picks</h3>
+            <p>Exclusive home decor and accessories.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories container reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Featured categories</p>
+            <h2>Browse by lifestyle</h2>
+          </div>
+          <a href="shop.html" class="text-link">See all</a>
+        </div>
+        <div class="category-grid" id="categoryGrid"></div>
+      </section>
+
+      <section class="products-section container reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Trending now</p>
+            <h2>Best-selling picks</h2>
+          </div>
+          <a href="shop.html" class="text-link">View all</a>
+        </div>
+        <div class="product-grid" id="trendingProducts"></div>
+      </section>
+
+      <section class="flash-sale container reveal">
+        <div class="flash-sale-card">
+          <div>
+            <p class="eyebrow">Flash sale</p>
+            <h2>Limited-time offers end soon</h2>
+            <p>Grab premium products at irresistible prices.</p>
+          </div>
+          <div class="countdown" id="countdown">
+            <div><span id="days">00</span><small>Days</small></div>
+            <div><span id="hours">00</span><small>Hours</small></div>
+            <div><span id="minutes">00</span><small>Minutes</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products-section container reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">New arrivals</p>
+            <h2>Fresh drop this week</h2>
+          </div>
+          <a href="shop.html" class="text-link">Explore</a>
+        </div>
+        <div class="product-grid" id="newArrivals"></div>
+      </section>
+
+      <section class="brands container reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Trusted brands</p>
+            <h2>Top choices from leading labels</h2>
+          </div>
+        </div>
+        <div class="brand-grid" id="brandGrid"></div>
+      </section>
+
+      <section class="reviews container reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Customer love</p>
+            <h2>What shoppers say</h2>
+          </div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card"><p>“The design feels luxurious and the ordering experience was perfect.”</p><strong>— Mia S.</strong></article>
+          <article class="review-card"><p>“Fast delivery, reliable quality, and stunning packaging.”</p><strong>— Arjun K.</strong></article>
+          <article class="review-card"><p>“Their product curation feels unlike any other shop I’ve used.”</p><strong>— Nina T.</strong></article>
+        </div>
+      </section>
+
+      <section class="container reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">FAQ</p>
+            <h2>Everything you need to know</h2>
+          </div>
+        </div>
+        <div class="faq-card">
+          <details class="faq-item" open>
+            <summary>How quickly do you ship?</summary>
+            <p>Orders are dispatched within 24 hours and typically arrive in 3–5 business days.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I return a product?</summary>
+            <p>Yes. Returns are accepted within 14 days for unused items in original packaging.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you offer gift wrapping?</summary>
+            <p>Absolutely. Select gift wrap at checkout for a polished presentation.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="container reveal">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">Contact us</p>
+            <h2>Need assistance? We’re here.</h2>
+            <p>Reach out for help with orders, sizing, delivery, or custom requests.</p>
+          </div>
+          <form id="contactForm" class="newsletter-form">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Your email" required />
+            <textarea rows="4" placeholder="Tell us how we can help"></textarea>
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="newsletter container reveal">
+        <div>
+          <p class="eyebrow">Stay in the loop</p>
+          <h2>Subscribe for curated offers and launches.</h2>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="index.html"><span class="brand-mark">T</span><span>TMart</span></a>
+          <p>Premium quality products with thoughtful design and effortless delivery.</p>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <a href="index.html">About</a>
+          <a href="index.html">Careers</a>
+          <a href="index.html">Contact</a>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <a href="index.html">FAQ</a>
+          <a href="index.html">Privacy</a>
+          <a href="index.html">Terms</a>
+        </div>
+        <div>
+          <h3>Follow</h3>
+          <a href="#">Instagram</a>
+          <a href="#">X</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 TMart. Crafted with elegance.</div>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

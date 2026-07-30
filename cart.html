@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart | TMart</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <div class="toast-root" id="toastRoot"></div>
+    <button class="scroll-top" id="scrollTopBtn">↑</button>
+    <header class="topbar">
+      <nav class="navbar container">
+        <a class="brand" href="index.html"><span class="brand-mark">T</span><span>TMart</span></a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="wishlist.html">Wishlist</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container page-section">
+      <div class="cart-layout">
+        <section class="cart-items" id="cartItems"></section>
+        <aside class="summary-card" id="cartSummary"></aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-bottom">© 2026 TMart. Crafted with elegance.</div>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

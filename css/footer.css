@@ -1,0 +1,5 @@
+.footer { margin-top: 3rem; padding: 3rem 0 2rem; background: linear-gradient(135deg, rgba(124,58,237,.1), rgba(37,99,235,.12)); border-top: 1px solid var(--border); }
+.footer-grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 2rem; }
+.footer h3 { margin-top: 0; }
+.footer a { display: block; padding: .3rem 0; color: var(--muted); }
+.footer-bottom { padding-top: 1.5rem; text-align: center; color: var(--muted); border-top: 1px solid var(--border); margin-top: 1.5rem; }

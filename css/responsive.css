@@ -1,0 +1,24 @@
+.nav-toggle { display: none; }
+@media (max-width: 980px) {
+  .hero, .product-detail-layout, .checkout-layout, .cart-layout, .auth-card { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .category-grid, .brand-grid, .review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .shop-layout { grid-template-columns: 1fr; }
+  .filters-card { order: 2; }
+  .newsletter, .flash-sale-card { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 760px) {
+  .navbar { flex-wrap: wrap; }
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .nav-links, .nav-actions .search-shell { display: none; }
+  .nav-links.open { display: flex; flex-direction: column; width: 100%; order: 3; }
+  .nav-actions { width: 100%; justify-content: space-between; }
+  .product-grid { grid-template-columns: 1fr; }
+  .category-grid, .brand-grid, .review-grid, .payment-options { grid-template-columns: 1fr; }
+  .newsletter-form { flex-direction: column; width: 100%; }
+  .cart-item { grid-template-columns: 1fr; }
+  .profile-grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 1400px) {
+  .container { width: min(1320px, calc(100% - 3rem)); }
+}

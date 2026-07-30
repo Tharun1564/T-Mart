@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | TMart</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <div class="toast-root" id="toastRoot"></div>
+    <header class="topbar">
+      <nav class="navbar container">
+        <a class="brand" href="index.html"><span class="brand-mark">T</span><span>TMart</span></a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="auth-page">
+      <section class="auth-card reveal">
+        <div class="auth-hero">
+          <p class="eyebrow">Welcome back</p>
+          <h1>Sign in to continue your shopping journey.</h1>
+          <p>Keep track of your orders, wishlist, and personal preferences.</p>
+        </div>
+        <form id="signinForm" class="auth-form">
+          <label>
+            Email
+            <input type="email" id="signinEmail" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Password
+            <div class="password-field">
+              <input type="password" id="signinPassword" required />
+              <button type="button" class="toggle-password" data-target="signinPassword">Show</button>
+            </div>
+          </label>
+          <div class="auth-inline">
+            <label class="checkbox-row"><input type="checkbox" id="rememberMe" /> Remember me</label>
+            <a href="signup.html" class="text-link">Create account</a>
+          </div>
+          <button type="submit" class="btn btn-primary w-full">Sign in</button>
+          <p id="signinError" class="form-error"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-bottom">© 2026 TMart. Crafted with elegance.</div>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

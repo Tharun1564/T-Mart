@@ -1,0 +1,5 @@
+.auth-page { min-height: calc(100vh - 140px); display: grid; place-items: center; padding: 2rem 0; }
+.auth-card { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 960px; width: min(100%, 960px); padding: 2rem; }
+.auth-hero { padding: 1rem; border-radius: 24px; background: linear-gradient(135deg, rgba(124,58,237,.12), rgba(37,99,235,.12)); }
+.password-field { position: relative; }
+.password-field button { position: absolute; right: .5rem; top: 50%; transform: translateY(-50%); border: 0; background: transparent; color: var(--accent); cursor: pointer; }

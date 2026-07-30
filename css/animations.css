@@ -1,0 +1,10 @@
+.animate-bounce { animation: bounce .6s ease; }
+.animate-fade { animation: fadeIn .5s ease; }
+.animate-slide { animation: slideIn .5s ease; }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideIn { from { transform: translateX(12px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+.ripple { position: relative; overflow: hidden; }
+.ripple::after { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,.35); transform: scale(0); border-radius: 50%; animation: ripple .5s ease-out; }
+@keyframes ripple { to { transform: scale(2.2); opacity: 0; } }
